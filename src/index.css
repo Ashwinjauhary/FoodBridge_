@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-sand-50 text-ink-900 font-body antialiased;
+}
+
+/* Large-text accessibility mode, toggled via .large-text on <html> */
+html.large-text {
+  font-size: 120%;
+}
+
+/* Visible focus rings everywhere — important for older users and keyboard nav */
+:focus-visible {
+  outline: 3px solid #C48F1F;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
